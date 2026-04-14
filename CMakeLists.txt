@@ -4,6 +4,7 @@ project(C)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(main main.cpp)
-add_executable(bt1 BT1/bt1.cpp
-        BT2/bt2.1.cpp
-        BT2/bt2.2_2.3_2.4.cpp)
+add_executable(bt1 BT1/bt1.cpp)
+add_executable(bt2.1 BT2/bt2.1.cpp)
+add_executable(bt2.2_2.3_2.4 BT2/bt2.2_2.3_2.4.cpp)
+add_executable(bt2.2_2.3_2.4 BT2/bt2.5_2.6_2.7.cpp)

@@ -30,7 +30,7 @@ int main() {
     printf("Up 5 : %f\n", x += 5);
     printf("Min 3 : %f\n", x -= 3);
     printf("Mul 2 : %f\n", x *= 2);
-    printf("Div 3 : %f\n", x/=3);
+    printf("Div 4 : %f\n", x/=4);
 
 
 
