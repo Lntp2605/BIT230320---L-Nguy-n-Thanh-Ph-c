@@ -37,6 +37,27 @@ int main() {
         printf("%d is equal %d\n", num3, num4);
     }
 
+    int num5 = 10;
+    printf("Initial value: %d\n", num5);
+
+    num5 += 5;  // num = num + 5
+    printf("After += 5: %d\n", num5);
+
+    num5 -= 3;  // num = num - 3
+    printf("After -= 3: %d\n", num5);
+
+    num5 *= 2;  // num = num * 2
+    printf("After *= 2: %d\n", num5);
+
+    num5 /= 4;  // num = num / 4
+    printf("After /= 4: %d\n", num5);
+
+    int num6 = atoi("123");
+    printf("After atoi =%d\n", num6);
+
+    double num7 = 3.14;
+    printf("Square root of %.1f is %.1f\n", num7, sqrt(num7));
 
     return 0;
+
 }
