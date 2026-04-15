@@ -2,40 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 
 int main() {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    if (num >= 10 && num <= 50) {
-        printf("You entered a number in between 10 and 50\n");
+    int x = 10;
+    {
+        int y = 20;
+        printf("x = %d,y = %d\n", x, y);
+        {
+            int z= 30;
+            printf("x = %d,y = %d,z = %d", x, y, z);
+        }
     }
-    else {
-        printf("You entered a number not in range\n");
-    }
+    printf("x = %d\n",x);
 
-    int num1, num2;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &num1, &num2);
-    printf("Sum =%d\n", num1 + num2);
-    printf("Difference =%d\n", num1 - num2);
-    printf("Product =%d\n", num1 * num2);
-    printf("Quotient =%d\n", num1 / num2);
-    printf("Exponent =%d\n", num1 % num2);
-
-    int num3, num4;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &num3, &num4);
-    if (num3 > num4) {
-        printf("%d is greater than %d\n", num3, num4);
-    }
-    else if (num3 < num4) {
-        printf("%d is smaller than %d\n", num3, num4);
-    }
-    else {
-        printf("%d is equal %d\n", num3, num4);
-    }
+    int globalVar = 100;
+    
 
 
     return 0;
