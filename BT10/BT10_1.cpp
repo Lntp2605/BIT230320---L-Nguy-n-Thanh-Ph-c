@@ -16,7 +16,7 @@ struct Student1 {
 };
 
 int main() {
-    FILE *f1, *f2, *f3, *f5;
+    FILE *f1, *f2, *f3, *f4;
     f3 = fopen("text3.txt", "w");
     if (f3==NULL) {
         printf("Error opening file");
@@ -92,12 +92,30 @@ int main() {
     fread(digit, sizeof(int), m, f2);
     printf("Mang:\n");
     for (int i=0;i<m;i++) {
-        printf("%d", digit[i]);
+        printf("%d\n", digit[i]);
     }
     fclose(f2);
 
 
-
+    f4 = fopen("example.dat", "rb+");
+    if (f4 == NULL) {
+        f4 = fopen("example.dat", "wb+"); // Create the file
+        if (f4 == NULL) {
+            printf("Error: Cannot open file!\n");
+            return 1;
+        }
+    }
+    int value = 12345;
+    fseek(f4, 20, SEEK_SET);
+    fwrite(&value, sizeof(int), 1, f4);
+    printf("Wrote %d at position 20.\n", value);
+    int readValue;
+    fseek(f4, 20, SEEK_SET);
+    fread(&readValue, sizeof(int), 1, f4);
+    printf("Read %d from position 20.\n", readValue);
+    long position = ftell(f4);
+    printf("Current file pointer position: %ld\n", position);
+    fclose(f4);
 
     return 0;
 }
