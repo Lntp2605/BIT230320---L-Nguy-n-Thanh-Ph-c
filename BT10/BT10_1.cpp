@@ -117,5 +117,4 @@ int main() {
     printf("Current file pointer position: %ld\n", position);
     fclose(f4);
 
-    return 0;
 }
