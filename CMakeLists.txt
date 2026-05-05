@@ -17,7 +17,8 @@ add_executable(bt1 BT1/bt1.cpp
         Mid_Term/B1.cpp
         Mid_Term/b2.cpp
         Mid_Term/B3.cpp
-        BT11/BT11_1.cpp)
+        BT11/BT11_1.cpp
+        BT12/BT12_1.cpp)
 add_executable(bt2.1 BT2/bt2.1.cpp)
 add_executable(bt2.2_2.3_2.4 BT2/bt2.2_2.3_2.4.cpp)
 add_executable(bt2.5_2.6_2.7 BT2/bt2.5_2.6_2.7.cpp)
