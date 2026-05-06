@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <ctype.h>
 void bai3(float a, float b) {
     if (a == 0) {
         if (b == 0) {
@@ -115,5 +116,42 @@ printf("Bai 5\n");
     printf("Mang sau khi sap xep giam dan:\n");
     printArray(arr2, y);
 
+
+//Bai 6
+printf("\n");
+printf("Bai 6\n");
+    float km, total = 0;
+    printf("Nhap so km: ");
+    scanf("%f", &km);
+    if (km <= 1) {
+        total = 15 * km;
+    }
+    else if (km <= 5) {
+        total = 15 + (km - 1) * 13;
+    }
+    else {
+        total = 15 + 4 * 13 + (km - 5) * 11;
+    }
+    if (km > 120) {
+        total *= 0.9;
+    }
+    printf("Tien taxi: %.3f K\n", total);
+
+
+//Bai 7
+printf("\n");
+printf("Bai 7\n");
+    char c;
+    printf("Nhap ky tu: ");
+    scanf(" %c", &c);
+    if (isdigit(c)) {
+        printf("Ky tu so la: %c\n", c);
+    }
+    else if (isalpha(c)) {
+        printf("Ky tu chu la: %c\n", c);
+    }
+    else {
+        printf("Khong phai chu hay so\n");
+    }
     return 0;
 }
